@@ -9,8 +9,7 @@ const updateStatus = async (
   applicationId: string,
   status: string
 ) => {
-  const response = await fetch(
-    `http://localhost:5000/applications/${applicationId}`,
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/applications/${applicationId}`,
     {
       method: "PUT",
       headers: {
@@ -37,7 +36,7 @@ const uploadResume = async (
   formData.append("resume", file);
 
   const response = await fetch(
-    "http://localhost:5000/upload-resume",
+    `${process.env.NEXT_PUBLIC_API_URL}/upload-resume`,
     {
       method: "POST",
       body: formData
@@ -53,13 +52,13 @@ const uploadResume = async (
   }
 };
   useEffect(() => {
-    fetch("http://localhost:5000/jobs")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/jobs`)
       .then((res) => res.json())
       .then((data) => setJobs(data));
 
-    fetch("http://localhost:5000/applications")
-      .then((res) => res.json())
-      .then((data) => setApplications(data));
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/applications`)
+  .then((res) => res.json())
+  .then((data) => setApplications(data));
   }, []);
 
   return (
