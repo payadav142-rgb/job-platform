@@ -725,6 +725,66 @@ export default function Home() {
 
 </section>
 
+<section className="mb-20">
+
+  <div className="text-center mb-12">
+
+    <h2 className="text-4xl font-black mb-3">
+      Why Choose JobHub?
+    </h2>
+
+    <p className="text-gray-500 text-lg">
+      Everything you need to get hired faster
+    </p>
+
+  </div>
+
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
+      <div className="text-5xl mb-4">🤖</div>
+      <h3 className="text-xl font-bold mb-3">
+        AI Resume Analysis
+      </h3>
+      <p className="text-gray-500">
+        Analyze resumes instantly and get improvement suggestions.
+      </p>
+    </div>
+
+    <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
+      <div className="text-5xl mb-4">🎯</div>
+      <h3 className="text-xl font-bold mb-3">
+        AI Match Score
+      </h3>
+      <p className="text-gray-500">
+        Find jobs that perfectly match your skills.
+      </p>
+    </div>
+
+    <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
+      <div className="text-5xl mb-4">⚡</div>
+      <h3 className="text-xl font-bold mb-3">
+        One Click Apply
+      </h3>
+      <p className="text-gray-500">
+        Apply to jobs quickly without lengthy forms.
+      </p>
+    </div>
+
+    <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
+      <div className="text-5xl mb-4">✅</div>
+      <h3 className="text-xl font-bold mb-3">
+        Verified Companies
+      </h3>
+      <p className="text-gray-500">
+        Only trusted recruiters and verified companies.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
         <div className="mb-10">
 
           <label className="block mb-4 text-xl font-bold">
