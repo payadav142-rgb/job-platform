@@ -674,6 +674,57 @@ export default function Home() {
 
 </section>
 
+<section className="mb-20">
+
+  <div className="text-center mb-10">
+
+    <h2 className="text-4xl font-black mb-3">
+      Trusted By Top Companies
+    </h2>
+
+    <p className="text-gray-500 text-lg">
+      Thousands of companies hire through JobHub
+    </p>
+
+  </div>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5">
+
+    {[
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Infosys",
+      "TCS",
+      "Wipro",
+      "Accenture",
+      "IBM"
+    ].map((company) => (
+
+      <div
+        key={company}
+        className="
+          bg-white dark:bg-gray-900
+          border border-gray-200 dark:border-gray-800
+          rounded-3xl
+          p-5
+          text-center
+          font-bold
+          shadow-md
+          hover:shadow-xl
+          hover:-translate-y-2
+          transition-all duration-300
+        "
+      >
+        {company}
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
+
         <div className="mb-10">
 
           <label className="block mb-4 text-xl font-bold">
@@ -786,13 +837,46 @@ export default function Home() {
             .map((job: any) => (
 
               <div
-                key={job.id}
-                className="bg-white/80 dark:bg-gray-900/90 p-10 rounded-[36px] shadow-xl"
-              >
+  key={job.id}
+  className="
+  bg-white dark:bg-gray-900
+  border border-gray-200 dark:border-gray-800
+  p-8
+  rounded-[32px]
+  shadow-lg
+  hover:shadow-2xl
+  hover:-translate-y-2
+  transition-all duration-300
+"
+>
 
-                <h2 className="text-3xl md:text-4xl font-black dark:text-white">
-                  {job.title}
-                </h2>
+                <div className="flex items-center justify-between mb-6">
+
+  <div className="flex items-center gap-4">
+
+    <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white text-xl font-bold">
+      {job.title?.charAt(0)}
+    </div>
+
+    <div>
+
+      <p className="font-semibold text-gray-500 text-sm">
+        JobHub Verified
+      </p>
+
+      <p className="text-sm text-gray-400">
+        Posted Recently
+      </p>
+
+    </div>
+
+  </div>
+
+  <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+    Active
+  </span>
+
+</div>
 
                 <p className="mt-8 text-gray-600 dark:text-white text-lg leading-9">
                   {job.description}
@@ -801,10 +885,33 @@ export default function Home() {
                 <p className="mt-8 text-xl font-semibold dark:text-gray-200">
                   📍 {job.location}
                 </p>
+                <div className="flex flex-wrap gap-3 mt-5">
 
-                <p className="mt-5 text-4xl font-black text-green-500">
-                  💰 ₹{job.salary}
-                </p>
+  <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+    Full Time
+  </span>
+
+  <span className="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+    Immediate Hiring
+  </span>
+
+  <span className="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
+    Verified
+  </span>
+
+</div>
+
+                <div className="mt-6">
+
+  <p className="text-sm text-gray-500">
+    Salary Package
+  </p>
+
+  <p className="text-3xl font-black text-green-600">
+    ₹{job.salary}
+  </p>
+
+</div>
 
                 {matchData?.jobId ===
                   job.id && (
