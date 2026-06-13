@@ -785,6 +785,56 @@ export default function Home() {
 
 </section>
 
+<section className="mb-20">
+
+  <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-[40px] p-10 md:p-16 text-white">
+
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+
+      <div>
+        <h2 className="text-5xl font-black">
+          5000+
+        </h2>
+        <p className="mt-2 text-lg opacity-90">
+          Active Jobs
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-5xl font-black">
+          1000+
+        </h2>
+        <p className="mt-2 text-lg opacity-90">
+          Companies
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-5xl font-black">
+          25000+
+        </h2>
+        <p className="mt-2 text-lg opacity-90">
+          Candidates
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-5xl font-black">
+          98%
+        </h2>
+        <p className="mt-2 text-lg opacity-90">
+          Success Rate
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
         <div className="mb-10">
 
           <label className="block mb-4 text-xl font-bold">
