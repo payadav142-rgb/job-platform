@@ -2,7 +2,7 @@
 
 import toast from "react-hot-toast";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 import {
   useEffect,
   useState
@@ -534,23 +534,145 @@ export default function Home() {
 
       <div className="mt-8">
 
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 mb-16">
+        <section className="relative overflow-hidden mb-20">
 
-          <div>
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-[40px]" />
 
-            <h1 className="text-5xl md:text-7xl font-black leading-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
-              Find Your
-              <br />
-              Dream Job 🚀
-            </h1>
+  <div className="relative grid lg:grid-cols-2 gap-12 items-center bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border border-white/20 dark:border-gray-800 rounded-[40px] p-10 md:p-16 shadow-2xl">
 
-            <p className="text-gray-600 dark:text-gray-400 mt-6 text-lg md:text-2xl max-w-2xl leading-9">
-              Explore premium opportunities from top companies worldwide.
+    {/* LEFT SIDE */}
+    <div>
+
+      <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        🚀 AI Powered Recruitment Platform
+      </div>
+
+      <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+
+        <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+          Find Your
+        </span>
+
+        <br />
+
+        <span className="text-gray-900 dark:text-white">
+          Dream Job
+        </span>
+
+      </h1>
+
+      <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl leading-8 mb-8">
+        Discover premium jobs from top companies,
+        upload your resume, get AI match scores
+        and land your next opportunity faster.
+      </p>
+
+      <div className="flex flex-wrap gap-4 mb-10">
+
+        <button
+          className="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold shadow-xl hover:scale-105 transition-all"
+        >
+          Find Jobs
+        </button>
+
+        <button
+          className="px-8 py-4 rounded-2xl border-2 border-gray-300 dark:border-gray-700 font-bold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+        >
+          Post Job
+        </button>
+
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg text-center">
+          <h3 className="text-3xl font-black text-blue-600">
+            5K+
+          </h3>
+          <p className="text-sm text-gray-500">
+            Jobs
+          </p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg text-center">
+          <h3 className="text-3xl font-black text-purple-600">
+            1K+
+          </h3>
+          <p className="text-sm text-gray-500">
+            Companies
+          </p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg text-center">
+          <h3 className="text-3xl font-black text-pink-600">
+            25K+
+          </h3>
+          <p className="text-sm text-gray-500">
+            Candidates
+          </p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg text-center">
+          <h3 className="text-3xl font-black text-green-600">
+            98%
+          </h3>
+          <p className="text-sm text-gray-500">
+            Success
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="hidden lg:flex justify-center">
+
+      <div className="w-full max-w-md bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-[40px] p-8 shadow-2xl">
+
+        <div className="bg-white dark:bg-gray-900 rounded-3xl p-8">
+
+          <div className="text-center">
+
+            <div className="text-7xl mb-4">
+              💼
+            </div>
+
+            <h2 className="text-3xl font-black mb-4">
+              AI Hiring
+            </h2>
+
+            <p className="text-gray-500 mb-6">
+              Resume Analysis • Match Score • Smart Hiring
             </p>
+
+            <div className="space-y-3">
+
+              <div className="bg-green-100 text-green-700 rounded-xl p-3 font-semibold">
+                ✓ Resume Uploaded
+              </div>
+
+              <div className="bg-blue-100 text-blue-700 rounded-xl p-3 font-semibold">
+                ✓ AI Match Score
+              </div>
+
+              <div className="bg-purple-100 text-purple-700 rounded-xl p-3 font-semibold">
+                ✓ Job Recommendations
+              </div>
+
+            </div>
 
           </div>
 
         </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
         <div className="mb-10">
 
@@ -801,7 +923,7 @@ export default function Home() {
         </div>
 
       </div>
-
+<Footer />
     </main>
 
   );

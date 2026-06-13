@@ -25,6 +25,23 @@ export default function RecruiterDashboard() {
   const [loading, setLoading] =
     useState(true);
 
+    const shortlisted =
+  applications.filter(
+    (a) => a.status === "Shortlisted"
+  ).length;
+
+const rejected =
+  applications.filter(
+    (a) => a.status === "Rejected"
+  ).length;
+
+const hired =
+  applications.filter(
+    (a) => a.status === "Hired"
+  ).length;
+
+
+
   useEffect(() => {
 
     const token =
@@ -263,7 +280,7 @@ export default function RecruiterDashboard() {
 
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
 
         <div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow">
 
@@ -291,15 +308,39 @@ export default function RecruiterDashboard() {
 
         <div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow">
 
-          <h2 className="text-4xl font-black text-purple-600">
-            ₹0
-          </h2>
+  <h2 className="text-4xl font-black text-yellow-500">
+    {shortlisted}
+  </h2>
 
-          <p className="mt-2">
-            Revenue
-          </p>
+  <p className="mt-2">
+    Shortlisted
+  </p>
 
-        </div>
+</div>
+
+<div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow">
+
+  <h2 className="text-4xl font-black text-red-500">
+    {rejected}
+  </h2>
+
+  <p className="mt-2">
+    Rejected
+  </p>
+
+</div>
+
+<div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow">
+
+  <h2 className="text-4xl font-black text-purple-500">
+    {hired}
+  </h2>
+
+  <p className="mt-2">
+    Hired
+  </p>
+
+</div>
 
       </div>
 
@@ -392,19 +433,17 @@ export default function RecruiterDashboard() {
               )}
 
               <div className="flex gap-4 mt-6 flex-wrap">
-
-                <button
-                  onClick={() =>
-                    updateStatus(
-                      item.id,
-                      "Accepted"
-                    )
-                  }
-                  className="bg-green-600 text-white px-5 py-2 rounded-xl"
-                >
-                  Accept
-                </button>
-
+<button
+  onClick={() =>
+    updateStatus(
+      item.id,
+      "Shortlisted"
+    )
+  }
+  className="bg-green-600 text-white px-5 py-2 rounded-xl"
+>
+  Shortlist
+</button>
                 <button
                   onClick={() =>
                     updateStatus(
@@ -416,7 +455,17 @@ export default function RecruiterDashboard() {
                 >
                   Reject
                 </button>
-
+<button
+  onClick={() =>
+    updateStatus(
+      item.id,
+      "Hired"
+    )
+  }
+  className="bg-purple-600 text-white px-5 py-2 rounded-xl"
+>
+  Hire
+</button>
               </div>
 
             </div>

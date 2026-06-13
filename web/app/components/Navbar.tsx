@@ -103,7 +103,7 @@ return ( <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b
         {user?.role === "recruiter" && (
           <>
             <Link
-              href="/recruiter"
+              href="/recruiter-dashboard"
               className="hover:text-orange-500 transition"
             >
               Dashboard
@@ -115,6 +115,13 @@ return ( <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b
             >
               Post Job
             </Link>
+
+            <Link
+  href="/recruiter/applications"
+  className="hover:text-orange-500 transition"
+>
+  Applicants
+</Link>
 
             <Link
               href="/premium"
@@ -149,7 +156,7 @@ return ( <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b
     {open && (
       <div className="md:hidden mt-5 flex flex-col gap-3 bg-white border border-orange-100 shadow-xl rounded-2xl p-5 text-gray-700">
         <Link
-          href={user?.role === "recruiter" ? "/recruiter" : "/"}
+          href={user?.role === "recruiter" ? "/recruiter-dashboard" : "/"}
           onClick={() => setOpen(false)}
           className="hover:text-orange-500 transition"
         >
@@ -201,6 +208,14 @@ return ( <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b
             >
               Post Job
             </Link>
+
+            <Link
+  href="/recruiter/applications"
+  onClick={() => setOpen(false)}
+  className="hover:text-orange-500 transition"
+>
+  Applicants
+</Link>
 
             <Link
               href="/premium"
