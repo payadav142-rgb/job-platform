@@ -1090,7 +1090,75 @@ export default function Home() {
           </div>
 
         )}
+<section className="my-20">
 
+  <h2 className="text-4xl font-black text-center mb-4">
+    What Users Say ❤️
+  </h2>
+
+  <p className="text-center text-gray-500 mb-10">
+    Trusted by thousands of job seekers
+  </p>
+
+  <div className="grid md:grid-cols-3 gap-6">
+
+    <div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all">
+      <div className="text-yellow-500 text-xl mb-3">
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p className="text-gray-600 dark:text-gray-300">
+        Got my first React Developer job within 2 weeks using JobHub.
+      </p>
+
+      <h3 className="font-bold mt-4">
+        Rahul Sharma
+      </h3>
+
+      <p className="text-sm text-gray-500">
+        Frontend Developer
+      </p>
+    </div>
+
+    <div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all">
+      <div className="text-yellow-500 text-xl mb-3">
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p className="text-gray-600 dark:text-gray-300">
+        AI Match Score helped me focus only on relevant jobs.
+      </p>
+
+      <h3 className="font-bold mt-4">
+        Priya Verma
+      </h3>
+
+      <p className="text-sm text-gray-500">
+        Software Engineer
+      </p>
+    </div>
+
+    <div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all">
+      <div className="text-yellow-500 text-xl mb-3">
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p className="text-gray-600 dark:text-gray-300">
+        Best hiring platform I've used. Clean UI and quick applications.
+      </p>
+
+      <h3 className="font-bold mt-4">
+        Aman Singh
+      </h3>
+
+      <p className="text-sm text-gray-500">
+        Data Analyst
+      </p>
+    </div>
+
+  </div>
+
+</section>
         <div className="relative mb-14">
 
           <input
